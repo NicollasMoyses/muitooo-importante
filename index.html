@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cu.css">
+    <link rel="stylesheet" href="./src/css/reset.css ">
+    <title>cuzin?</title>
+    <style>
+        body {
+            background-image: url('./css/gatofeio.jfif');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            color: aliceblue;
+        }
+
+        #meu-botao {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+        }
+
+        #fugitive-button {
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cuzinho hj?</h1>
+        <button id="meu-botao" onclick="window.location.href='https://www.youtube.com/shorts/Y4UNestCJYo'">Sim</button>
+
+        <button id="fugitive-button">Não</button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+    <script>
+        function desaparecerBotao() {
+            var botao = document.getElementById("botao-desaparece");
+
+            if (botao.classList.contains("oculto")) {
+                botao.classList.remove("oculto");
+                botao.classList.add("reaparecer");
+            } else {
+                botao.classList.remove("reaparecer");
+                botao.classList.add("oculto");
+            }
+        }
+
+        function mudarPosicao() {
+            var botao = document.getElementById("botao-impossivel");
+            var container = document.querySelector(".container");
+            var containerRect = container.getBoundingClientRect();
+
+            var left = Math.random() * (containerRect.width - botao.offsetWidth);
+            var top = Math.random() * (containerRect.height - botao.offsetHeight);
+
+            botao.style.left = left + "px";
+            botao.style.top = top + "px";
+
+            if (left < 0) left = 0;
+            if (top < 0) top = 0;
+            if (left + botaoWidth > containerRect.width) {
+                left = containerRect.width - botaoWidth;
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

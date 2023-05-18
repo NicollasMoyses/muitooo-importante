@@ -1,0 +1,15 @@
+.container {
+    text-align: center;
+    /* Centraliza o conteúdo horizontalmente */
+}
+
+#meu-botao {
+    margin-top: 500px;
+    /* Define o espaçamento desejado entre o h1 e o botão */
+}
+
+body {
+    background-image: url('gatofeio.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
